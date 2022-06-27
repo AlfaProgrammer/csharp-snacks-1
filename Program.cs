@@ -1,10 +1,34 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-/*SNACK5*/
-/*
-   Chiedere all'utente di inserire un numero
-   Se il numero è pari stampare il numero stesso, se è dispari stampare il successivo 
- */
+
+// SNACK 10 
+// Fai inserire un numero chiamato N all'utente
+// Genera N array ognuno fomrmato da 10 numeri casuali da 1 a 100
+// ogni volta che ne crei uno stampalo a schermo
+
+Console.WriteLine("Inserisci un numero: ");
+Random rand = new Random();
+
+int N = int.Parse(Console.ReadLine());
+
+for (int i = 0; i <= N; i++)
+{
+    int[] randomNumArray = new int[10];
+    for (int j = 0; j < randomNumArray.Length; j++)
+    {
+        int randNumber = rand.Next(0, 101);
+        randomNumArray[j] = randNumber;
+    }
+    for (int j = 0; j < randomNumArray.Length; j++) 
+    {
+        Console.Write($"{randomNumArray[j]}-");
+    }
+}
+
+
+//SNACK5
+//Chiedere all'utente di inserire un numero
+//Se il numero è pari stampare il numero stesso, se è dispari stampare il successivo 
 
 Console.WriteLine("Inserisci un numero: ");
 int userNumber = int.Parse(Console.ReadLine());
@@ -20,7 +44,7 @@ else {
 
 Console.WriteLine($"Il tuo numero è: {nToPrint}");
 
-/*SNACK 4*/
+//SNACK 4
 int somma = 0;
 double media;
 int contatore = 0;
@@ -35,7 +59,7 @@ Console.WriteLine($"La somma dei numer è {somma}");
 Console.WriteLine($"La media dei numer è {media}");
 
 
-/*SNACK 3*/
+//SNACK
 
 int[] numbers = new int[10];
 int sum = 0;
